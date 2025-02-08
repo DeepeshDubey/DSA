@@ -1,0 +1,17 @@
+class Solution {
+    public int missingNumber(int[] nums) {
+        int asum=0;
+        int n=nums.length;
+
+        int esum=(n*(n+1))/2;
+
+        for(int i=0;i<n;i++)
+        {
+            asum+=nums[i];
+        }
+
+        int missingnumber=esum-asum;
+        return missingnumber;
+        
+    }
+}
