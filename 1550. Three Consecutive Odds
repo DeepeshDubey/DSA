@@ -1,0 +1,27 @@
+class Solution {
+    public boolean threeConsecutiveOdds(int[] arr) {
+
+        int n=arr.length;
+        int check=0;
+        int count=0;
+
+        while(check<n)
+        {
+            if(arr[check]%2!=0)
+            {
+                count++;
+                check++;
+            }
+           else 
+            {
+                count=0;
+                check++;
+                
+            }
+            if( count==3)
+            return true;
+        }
+
+        return false;
+    }
+}
